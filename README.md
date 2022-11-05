@@ -43,3 +43,7 @@ docker container start -ai <nome>
 docker container run -p 8080:80 nginx
 # verificando se esta funcionando ou pelo browser acessando http://localhost:8080
 curl http://localhost:8080
+
+# mapeando diretorios para o container
+docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+
