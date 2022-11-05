@@ -47,3 +47,7 @@ curl http://localhost:8080
 # mapeando diretorios para o container
 docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
 
+# mapeando diretorios para o container e rodar em background
+docker container run -d --name ex-daemon-basic -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+# para parar o container 
+docker container stop ex-daemon-basic
