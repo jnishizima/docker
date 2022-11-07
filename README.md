@@ -51,3 +51,10 @@ docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
 docker container run -d --name ex-daemon-basic -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
 # para parar o container 
 docker container stop ex-daemon-basic
+
+-----------------------------------------------------------------------------------------------------------------
+# entendendo um pouco melhor sobre imagens
+docker image pull ubuntu:latest
+# ou colocando uma tag
+docker image tag ubuntu:latest radar-ubuntu
+
